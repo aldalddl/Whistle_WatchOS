@@ -7,10 +7,13 @@
 
 import WatchKit
 import Foundation
-
+import AVFoundation
 
 class InterfaceController: WKInterfaceController {
-
+    var player: AVAudioPlayer!
+    
+    @IBOutlet weak var whistleButton: WKInterfaceButton!
+    
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
     }
@@ -23,4 +26,15 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
+    @IBAction func whistleButtonPressed() {
+        playSound()
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+        player.numberOfLoops = -1
+    }
+    
 }

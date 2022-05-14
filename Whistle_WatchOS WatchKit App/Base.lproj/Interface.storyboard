@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Whistle_WatchOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" backgroundImage="whistleImg" id="0oF-Mq-LQx">
+                            <connections>
+                                <action selector="whistleButtonPressed" destination="AgC-eL-Hgc" id="MFu-5w-04Y"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="whistleButton" destination="0oF-Mq-LQx" id="abq-Am-P5D"/>
+                        <segue destination="8MK-zO-tnT" kind="relationship" relationship="nextPage" id="xJP-YY-xQ5"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -32,16 +45,70 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Whistle_WatchOS_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Whistle_WatchOS_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
+        <!--Timer Interface Controller-->
+        <scene sceneID="PAf-tH-3ki">
+            <objects>
+                <controller id="8MK-zO-tnT" customClass="TimerInterfaceController" customModule="Whistle_WatchOS_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="center" layout="overlap" id="58r-7m-R2s">
+                            <items>
+                                <picker width="0.5" height="100" alignment="left" verticalAlignment="center" focusStyle="sequence" id="g0L-2i-4ji">
+                                    <connections>
+                                        <action selector="minutePickerChanged:" destination="8MK-zO-tnT" id="VYi-yI-jd2"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="100" alignment="right" verticalAlignment="center" focusStyle="sequence" id="8g5-k1-zc9">
+                                    <connections>
+                                        <action selector="secondPickerChanged:" destination="8MK-zO-tnT" id="TNq-CS-RWY"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
+                            <items>
+                                <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </button>
+                                <button width="0.40000000000000002" alignment="right" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                    <connections>
+                                        <action selector="start" destination="8MK-zO-tnT" id="rg3-Mv-Tdx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="listPickerGroup" destination="58r-7m-R2s" id="dig-CS-kuW"/>
+                        <outlet property="minutePicker" destination="g0L-2i-4ji" id="Bia-Ry-6lc"/>
+                        <outlet property="resetButton" destination="9MH-QZ-fF8" id="iWf-av-b3E"/>
+                        <outlet property="secondPicker" destination="8g5-k1-zc9" id="z6e-Wq-0ys"/>
+                        <outlet property="startButton" destination="IgR-rd-5CC" id="opj-dP-2wQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="735" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="5uv-gH-odR">
+            <objects>
+                <controller id="URg-Us-f7u"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="345"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="whistleImg" width="682.5" height="682.5"/>
+    </resources>
 </document>

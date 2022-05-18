@@ -75,6 +75,7 @@
                                 </picker>
                             </items>
                         </group>
+                        <timer alignment="left" id="6Eb-mP-NZ4"/>
                         <group width="1" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
                             <items>
                                 <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
@@ -92,6 +93,7 @@
                     <connections>
                         <outlet property="listPickerGroup" destination="58r-7m-R2s" id="dig-CS-kuW"/>
                         <outlet property="minutePicker" destination="g0L-2i-4ji" id="Bia-Ry-6lc"/>
+                        <outlet property="myTimer" destination="6Eb-mP-NZ4" id="wTf-vd-ffg"/>
                         <outlet property="resetButton" destination="9MH-QZ-fF8" id="iWf-av-b3E"/>
                         <outlet property="secondPicker" destination="8g5-k1-zc9" id="z6e-Wq-0ys"/>
                         <outlet property="startButton" destination="IgR-rd-5CC" id="opj-dP-2wQ"/>

@@ -11,7 +11,7 @@ import Foundation
 
 class TimerInterfaceController: WKInterfaceController {
 
-    @IBOutlet weak var WKTimer: WKInterfaceTimer!
+    @IBOutlet weak var myTimer: WKInterfaceTimer!
     
     @IBOutlet weak var minutePicker: WKInterfacePicker!
     @IBOutlet weak var secondPicker: WKInterfacePicker!
@@ -24,6 +24,7 @@ class TimerInterfaceController: WKInterfaceController {
     var minuteOunces = 1
     var secondOunces = 1
 
+    
     enum WatchStatus {
         case start
         case stop
@@ -109,8 +110,8 @@ class TimerInterfaceController: WKInterfaceController {
                 let date = Date(timeIntervalSinceNow: totalTime)
 
                 timer = Timer.scheduledTimer(timeInterval: totalTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
-                WKTimer.setDate(date)
-                WKTimer.start()
+                myTimer.setDate(date)
+                myTimer.start()
             
             case .stop:
                 self.watchStatus = .start
@@ -120,10 +121,8 @@ class TimerInterfaceController: WKInterfaceController {
     }
     
     @objc func timerDone(){
-        //timer done counting down
         timer.invalidate()
         print("End.")
+         //timer done counting down
     }
 }
-
-

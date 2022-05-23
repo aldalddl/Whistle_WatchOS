@@ -63,19 +63,32 @@
                     <items>
                         <group width="1" alignment="center" layout="overlap" id="58r-7m-R2s">
                             <items>
-                                <picker width="0.5" height="100" alignment="left" verticalAlignment="center" focusStyle="sequence" id="g0L-2i-4ji">
-                                    <connections>
-                                        <action selector="minutePickerChanged:" destination="8MK-zO-tnT" id="VYi-yI-jd2"/>
-                                    </connections>
-                                </picker>
-                                <picker width="0.5" height="100" alignment="right" verticalAlignment="center" focusStyle="sequence" id="8g5-k1-zc9">
-                                    <connections>
-                                        <action selector="secondPickerChanged:" destination="8MK-zO-tnT" id="TNq-CS-RWY"/>
-                                    </connections>
-                                </picker>
+                                <group width="0.45000000000000001" alignment="left" id="zWp-Yl-Rha">
+                                    <items>
+                                        <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="g0L-2i-4ji">
+                                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
+                                            <connections>
+                                                <action selector="minutePickerChanged:" destination="8MK-zO-tnT" id="VYi-yI-jd2"/>
+                                            </connections>
+                                        </picker>
+                                        <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="min" minimumScaleFactor="0.5" id="N3f-ms-GjV"/>
+                                    </items>
+                                </group>
+                                <group width="0.45000000000000001" alignment="right" id="w1e-F0-A3d">
+                                    <items>
+                                        <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="8g5-k1-zc9">
+                                            <connections>
+                                                <action selector="secondPickerChanged:" destination="8MK-zO-tnT" id="TNq-CS-RWY"/>
+                                            </connections>
+                                        </picker>
+                                        <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="sec" minimumScaleFactor="0.5" id="lcj-IJ-9qh"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <timer alignment="left" id="6Eb-mP-NZ4"/>
+                        <timer alignment="center" id="6Eb-mP-NZ4">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </timer>
                         <group width="1" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
                             <items>
                                 <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">

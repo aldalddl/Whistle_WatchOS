@@ -80,6 +80,9 @@
                             <items>
                                 <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
                                     <fontDescription key="font" type="system" pointSize="14"/>
+                                    <connections>
+                                        <action selector="reset" destination="8MK-zO-tnT" id="hId-rx-wfZ"/>
+                                    </connections>
                                 </button>
                                 <button width="0.40000000000000002" alignment="right" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
                                     <fontDescription key="font" type="system" pointSize="14"/>
@@ -101,13 +104,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="735" y="345"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="5uv-gH-odR">
-            <objects>
-                <controller id="URg-Us-f7u"/>
-            </objects>
-            <point key="canvasLocation" x="976" y="345"/>
         </scene>
     </scenes>
     <resources>

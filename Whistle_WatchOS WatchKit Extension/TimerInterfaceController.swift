@@ -31,7 +31,14 @@ class TimerInterfaceController: WKInterfaceController {
     }
     var watchStatus: WatchStatus = .start
     
-    var timer = Timer()
+    var timer : Timer?
+    var elapsedTime : TimeInterval = 0.0
+    var startTime = NSDate()
+    var duration : TimeInterval = 45.0
+    
+    var minute : TimeInterval = 0.0
+    var second : TimeInterval = 0.0
+    
     var minutesPassed = 0
     var secondsPassed = 0
     var minuteTotalTime = 0
@@ -40,13 +47,17 @@ class TimerInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-        minutePickerTimer()
-        secondPickerTimer()
+//        resetButton.setAlpha(0.5)
+//        minutePickerTimer()
+//        secondPickerTimer()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        resetButton.setAlpha(0.5)
+        minutePickerTimer()
+        secondPickerTimer()
     }
 
     override func didDeactivate() {
@@ -94,35 +105,67 @@ class TimerInterfaceController: WKInterfaceController {
                 self.watchStatus = .stop
                 startButton.setTitle("Stop")
                 startButton.setBackgroundColor(UIColor.orange)
+                resetButton.setAlpha(1.0)
+            
 //                sequencePickerGroup.setHidden(true)
 //                listPickerGroup.setHidden(true)
             
-                timer.invalidate()
+//                timer!.invalidate()
                 minuteTotalTime = minuteOunces - 1
-                secondTotalTime = secondOunces - 1
-                
+                secondTotalTime = secondOunces
+
                 secondsPassed = 0
                 minutesPassed = 0
             
-                let minute:TimeInterval = Double(minuteTotalTime) * 60.0
-                let second:TimeInterval = Double(secondTotalTime)
-                let totalTime: TimeInterval = minute + second
-                let date = Date(timeIntervalSinceNow: totalTime)
+                minute = Double(minuteTotalTime) * 60.0
+                second = Double(secondTotalTime)
+                duration = minute + second
+//                date = NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date
 
-                timer = Timer.scheduledTimer(timeInterval: totalTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
-                myTimer.setDate(date)
+                timer = Timer.scheduledTimer(timeInterval: duration - elapsedTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
+                myTimer.setDate(NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date)
                 myTimer.start()
+                startTime = NSDate()
             
             case .stop:
                 self.watchStatus = .start
                 startButton.setTitle("Start")
                 startButton.setBackgroundColor(UIColor.green)
+                resetButton.setAlpha(1.0)
+                
+                let paused = NSDate()
+                elapsedTime += paused.timeIntervalSince(startTime as Date)
+                myTimer.stop()
+                timer?.invalidate()
         }
     }
     
+    @IBAction func reset() {
+        timer?.invalidate()
+        startButton.setTitle("Start")
+        startButton.setBackgroundColor(UIColor.green)
+        resetButton.setAlpha(0.5)
+        
+        //WKInterfaceTimer reset to picker time
+        myTimer.stop()
+        myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
+        
+        // Timer reset to picker time
+        elapsedTime = 0.0
+    }
+    
     @objc func timerDone(){
-        timer.invalidate()
+        timer?.invalidate()
         print("End.")
-         //timer done counting down
+        startButton.setTitle("Start")
+        startButton.setBackgroundColor(UIColor.green)
+        resetButton.setAlpha(0.5)
+        
+//        //WKInterfaceTimer reset to picker time
+        myTimer.stop()
+        myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
+        
+        // Timer reset to picker time
+        elapsedTime = 0.0
     }
 }

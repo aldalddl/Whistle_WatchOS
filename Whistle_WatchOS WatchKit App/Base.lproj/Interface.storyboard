@@ -63,32 +63,39 @@
                     <items>
                         <group width="1" alignment="center" layout="overlap" id="58r-7m-R2s">
                             <items>
-                                <group width="0.45000000000000001" alignment="left" id="zWp-Yl-Rha">
+                                <group width="1" alignment="left" id="UMU-Pe-N4U">
                                     <items>
-                                        <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="g0L-2i-4ji">
-                                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
-                                            <connections>
-                                                <action selector="minutePickerChanged:" destination="8MK-zO-tnT" id="VYi-yI-jd2"/>
-                                            </connections>
-                                        </picker>
-                                        <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="min" minimumScaleFactor="0.5" id="N3f-ms-GjV"/>
+                                        <group width="0.45000000000000001" alignment="left" id="zWp-Yl-Rha">
+                                            <items>
+                                                <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="g0L-2i-4ji">
+                                                    <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
+                                                    <connections>
+                                                        <action selector="minutePickerChanged:" destination="8MK-zO-tnT" id="VYi-yI-jd2"/>
+                                                    </connections>
+                                                </picker>
+                                                <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="min" minimumScaleFactor="0.5" id="N3f-ms-GjV"/>
+                                            </items>
+                                        </group>
+                                        <group width="0.45000000000000001" alignment="right" id="w1e-F0-A3d">
+                                            <items>
+                                                <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="8g5-k1-zc9">
+                                                    <connections>
+                                                        <action selector="secondPickerChanged:" destination="8MK-zO-tnT" id="TNq-CS-RWY"/>
+                                                    </connections>
+                                                </picker>
+                                                <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="sec" minimumScaleFactor="0.5" id="lcj-IJ-9qh"/>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
-                                <group width="0.45000000000000001" alignment="right" id="w1e-F0-A3d">
+                                <group width="1" height="104" alignment="left" id="Pc9-5C-IkX">
                                     <items>
-                                        <picker width="0.59999999999999998" height="100" alignment="left" verticalAlignment="center" id="8g5-k1-zc9">
-                                            <connections>
-                                                <action selector="secondPickerChanged:" destination="8MK-zO-tnT" id="TNq-CS-RWY"/>
-                                            </connections>
-                                        </picker>
-                                        <label width="0.40000000000000002" alignment="right" verticalAlignment="center" text="sec" minimumScaleFactor="0.5" id="lcj-IJ-9qh"/>
+                                        <timer alignment="center" verticalAlignment="center" id="6Eb-mP-NZ4"/>
                                     </items>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
                             </items>
                         </group>
-                        <timer alignment="center" id="6Eb-mP-NZ4">
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </timer>
                         <group width="1" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
                             <items>
                                 <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
@@ -107,16 +114,20 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="countdownGroup" destination="Pc9-5C-IkX" id="xRn-9p-Dk5"/>
                         <outlet property="listPickerGroup" destination="58r-7m-R2s" id="dig-CS-kuW"/>
                         <outlet property="minutePicker" destination="g0L-2i-4ji" id="Bia-Ry-6lc"/>
+                        <outlet property="minutePickerGroup" destination="zWp-Yl-Rha" id="B3o-cG-4or"/>
                         <outlet property="myTimer" destination="6Eb-mP-NZ4" id="wTf-vd-ffg"/>
                         <outlet property="resetButton" destination="9MH-QZ-fF8" id="iWf-av-b3E"/>
                         <outlet property="secondPicker" destination="8g5-k1-zc9" id="z6e-Wq-0ys"/>
+                        <outlet property="secondPickerGroup" destination="w1e-F0-A3d" id="Gkz-cQ-4wi"/>
                         <outlet property="startButton" destination="IgR-rd-5CC" id="opj-dP-2wQ"/>
+                        <outlet property="timePickerGroup" destination="UMU-Pe-N4U" id="76s-6C-hvh"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="735" y="345"/>
+            <point key="canvasLocation" x="735" y="347"/>
         </scene>
     </scenes>
     <resources>

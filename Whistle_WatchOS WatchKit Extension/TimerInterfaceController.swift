@@ -20,10 +20,14 @@ class TimerInterfaceController: WKInterfaceController {
     @IBOutlet weak var startButton: WKInterfaceButton!
     
     @IBOutlet weak var listPickerGroup: WKInterfaceGroup!
+    @IBOutlet weak var countdownGroup: WKInterfaceGroup!
+    
+    @IBOutlet weak var timePickerGroup: WKInterfaceGroup!
+    @IBOutlet weak var minutePickerGroup: WKInterfaceGroup!
+    @IBOutlet weak var secondPickerGroup: WKInterfaceGroup!
     
     var minuteOunces = 1
     var secondOunces = 1
-
     
     enum WatchStatus {
         case start
@@ -47,9 +51,7 @@ class TimerInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-//        resetButton.setAlpha(0.5)
-//        minutePickerTimer()
-//        secondPickerTimer()
+        countdownGroup.setHidden(true)
     }
 
     override func willActivate() {
@@ -107,10 +109,10 @@ class TimerInterfaceController: WKInterfaceController {
                 startButton.setBackgroundColor(UIColor.orange)
                 resetButton.setAlpha(1.0)
             
-//                sequencePickerGroup.setHidden(true)
-//                listPickerGroup.setHidden(true)
+                timePickerGroup.setHidden(true)
+                countdownGroup.setHidden(false)
             
-//                timer!.invalidate()
+//                timer?.invalidate()
                 minuteTotalTime = minuteOunces - 1
                 secondTotalTime = secondOunces
 
@@ -141,10 +143,16 @@ class TimerInterfaceController: WKInterfaceController {
     }
     
     @IBAction func reset() {
+        // avoid going to stop status
+        watchStatus = .start
+        
         timer?.invalidate()
         startButton.setTitle("Start")
         startButton.setBackgroundColor(UIColor.green)
         resetButton.setAlpha(0.5)
+        
+        timePickerGroup.setHidden(false)
+        countdownGroup.setHidden(true)
         
         //WKInterfaceTimer reset to picker time
         myTimer.stop()
@@ -155,13 +163,19 @@ class TimerInterfaceController: WKInterfaceController {
     }
     
     @objc func timerDone(){
+        // avoid going to stop status
+        watchStatus = .start
+        
         timer?.invalidate()
         print("End.")
         startButton.setTitle("Start")
         startButton.setBackgroundColor(UIColor.green)
         resetButton.setAlpha(0.5)
         
-//        //WKInterfaceTimer reset to picker time
+        timePickerGroup.setHidden(false)
+        countdownGroup.setHidden(true)
+        
+        //WKInterfaceTimer reset to picker time
         myTimer.stop()
         myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
         

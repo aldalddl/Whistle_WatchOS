@@ -16,8 +16,14 @@
                                 <action selector="whistleButtonPressed" destination="AgC-eL-Hgc" id="MFu-5w-04Y"/>
                             </connections>
                         </button>
+                        <slider width="1" alignment="center" verticalAlignment="bottom" alpha="0.90000000000000002" value="1" minimum="1" maximum="10" steps="10" id="SEf-k9-pAQ">
+                            <connections>
+                                <action selector="volumeSliderChanged:" destination="AgC-eL-Hgc" id="ICR-EW-5NV"/>
+                            </connections>
+                        </slider>
                     </items>
                     <connections>
+                        <outlet property="volumeSlider" destination="SEf-k9-pAQ" id="ZNd-oD-Mu2"/>
                         <outlet property="whistleButton" destination="0oF-Mq-LQx" id="abq-Am-P5D"/>
                         <segue destination="8MK-zO-tnT" kind="relationship" relationship="nextPage" id="xJP-YY-xQ5"/>
                     </connections>
@@ -61,9 +67,9 @@
             <objects>
                 <controller id="8MK-zO-tnT" customClass="TimerInterfaceController" customModule="Whistle_WatchOS_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" layout="overlap" id="58r-7m-R2s">
+                        <group width="1" height="0.59999999999999998" alignment="center" layout="overlap" id="58r-7m-R2s">
                             <items>
-                                <group width="1" alignment="left" id="UMU-Pe-N4U">
+                                <group width="1" height="1" alignment="left" id="UMU-Pe-N4U">
                                     <items>
                                         <group width="0.45000000000000001" alignment="left" id="zWp-Yl-Rha">
                                             <items>
@@ -88,23 +94,25 @@
                                         </group>
                                     </items>
                                 </group>
-                                <group width="1" height="104" alignment="left" id="Pc9-5C-IkX">
+                                <group width="1" height="1" alignment="left" id="Pc9-5C-IkX">
                                     <items>
-                                        <timer alignment="center" verticalAlignment="center" id="6Eb-mP-NZ4"/>
+                                        <timer alignment="center" verticalAlignment="center" id="6Eb-mP-NZ4">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                            <calendarUnit key="units" minute="YES" second="YES"/>
+                                        </timer>
                                     </items>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </group>
                             </items>
                         </group>
-                        <group width="1" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
+                        <group width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
                             <items>
-                                <button width="0.40000000000000002" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
+                                <button width="0.40000000000000002" height="1" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
                                     <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="reset" destination="8MK-zO-tnT" id="hId-rx-wfZ"/>
                                     </connections>
                                 </button>
-                                <button width="0.40000000000000002" alignment="right" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
+                                <button width="0.40000000000000002" height="1" alignment="right" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
                                     <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="start" destination="8MK-zO-tnT" id="rg3-Mv-Tdx"/>

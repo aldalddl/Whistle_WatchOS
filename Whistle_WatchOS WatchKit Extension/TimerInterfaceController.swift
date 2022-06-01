@@ -52,29 +52,39 @@ class TimerInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         // Configure interface objects here.
         countdownGroup.setHidden(true)
+        
+        startButton.setEnabled(false)
+        startButton.setBackgroundColor(.green)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        resetButton.setAlpha(0.5)
+        resetButton.setEnabled(false)
         minutePickerTimer()
         secondPickerTimer()
+        
+        
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        
     }
 
     @IBAction func minutePickerChanged(_ value: Int) {
         minuteOunces = value + 1
         print("minute value: \(value)")
+        
+        processButtonStatus()
     }
     
     @IBAction func secondPickerChanged(_ value: Int) {
         secondOunces = value + 1
         print("second value: \(value)")
+        
+        processButtonStatus()
     }
     
     func minutePickerTimer() {
@@ -106,8 +116,8 @@ class TimerInterfaceController: WKInterfaceController {
             case .start:
                 self.watchStatus = .stop
                 startButton.setTitle("Stop")
-                startButton.setBackgroundColor(UIColor.orange)
-                resetButton.setAlpha(1.0)
+                startButton.setBackgroundColor(.orange)
+                resetButton.setEnabled(true)
             
                 timePickerGroup.setHidden(true)
                 countdownGroup.setHidden(false)
@@ -125,6 +135,15 @@ class TimerInterfaceController: WKInterfaceController {
 //                date = NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date
 
                 timer = Timer.scheduledTimer(timeInterval: duration - elapsedTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
+//            setFontSizeAndWeight(size: CGFloat, weight: CGFloat)
+
+            //            let smallRing = CLKComplicationTemplateUtilitarianSmallRingImage()
+//            smallRing.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
+//            smallRing.ringStyle = .Closed
+//            smallRing.fillFraction = 5 / 9
+//            handler(CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: smallRing))
+            
+            
                 myTimer.setDate(NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date)
                 myTimer.start()
                 startTime = NSDate()
@@ -133,7 +152,7 @@ class TimerInterfaceController: WKInterfaceController {
                 self.watchStatus = .start
                 startButton.setTitle("Start")
                 startButton.setBackgroundColor(UIColor.green)
-                resetButton.setAlpha(1.0)
+                resetButton.setEnabled(true)
                 
                 let paused = NSDate()
                 elapsedTime += paused.timeIntervalSince(startTime as Date)
@@ -149,7 +168,7 @@ class TimerInterfaceController: WKInterfaceController {
         timer?.invalidate()
         startButton.setTitle("Start")
         startButton.setBackgroundColor(UIColor.green)
-        resetButton.setAlpha(0.5)
+        resetButton.setEnabled(false)
         
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
@@ -170,7 +189,7 @@ class TimerInterfaceController: WKInterfaceController {
         print("End.")
         startButton.setTitle("Start")
         startButton.setBackgroundColor(UIColor.green)
-        resetButton.setAlpha(0.5)
+        resetButton.setEnabled(false)
         
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
@@ -181,5 +200,22 @@ class TimerInterfaceController: WKInterfaceController {
         
         // Timer reset to picker time
         elapsedTime = 0.0
+    }
+}
+
+// MARK: Start Button
+extension TimerInterfaceController {
+    
+    // Activate Start Button when time is over 0
+    private func processButtonStatus() {
+        
+         if secondOunces == 1 && minuteOunces == 1 {
+            print("Disabled")
+            startButton.setEnabled(false)
+        } else {
+            print("abled")
+            startButton.setEnabled(true)
+        }
+        
     }
 }

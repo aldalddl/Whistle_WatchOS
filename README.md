@@ -1,7 +1,6 @@
 # Whistle Sound Application (WatchOS)
 WatchOS app playing whistle sound maded for P.E teachers
 
-<img src="https://img.shields.io/badge/platform-firebase-blue">  <img src="https://img.shields.io/badge/platform-android-green"> 
 
 ## Summary
 

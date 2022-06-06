@@ -4,7 +4,6 @@ WatchOS app playing whistle sound maded for P.E teachers
 
 ## Summary
 
-![final](https://user-images.githubusercontent.com/63048392/115654781-cf9e8500-a36c-11eb-96b6-550dc4d99f2e.png)
 
 ## Requirements
 - WathOS 8+

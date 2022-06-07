@@ -1,4 +1,5 @@
-# Whistle Sound Application (WatchOS)
+# Wristle
+Whistle on your wrist
 WatchOS app playing whistle sound maded for P.E teachers
 
 
@@ -9,22 +10,21 @@ WatchOS app playing whistle sound maded for P.E teachers
 - WathOS 8+
 
 ## Description
-- category menu
-
-
-## Demo App
-
-
-# Calert
-Car Dashboard warning symbol finder
-
+- Whistle
+- Timer
 
 ## Tech Stack
-* Android Studio
-* Minimum SDK level 21
-* JAVA based
+* Independent Watch App
+* XCode
+* Swift based
+* WatchKit
 * Architecture
   * MVC (Model-View-Controller)
+
+## Installation
+- GO to App Store in your Apple Watch 
+- Search with keyword 'whistle' or 'wristle'
+- Download then you can use wristle
 
 ## Library
 * [Lottie](https://airbnb.design/lottie/)

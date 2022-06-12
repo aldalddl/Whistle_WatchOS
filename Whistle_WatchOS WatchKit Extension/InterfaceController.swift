@@ -23,22 +23,11 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
-        // The sequencer should be focused to receive events
-//         crownSequencer.focus()
-//         crownSequencer.delegate = self
-//        crownSequencer.delegate = self
-        
-//        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
-//        player = try! AVAudioPlayer(contentsOf: url!)
-//        player.volume = 0.5
         volumeSlider.setValue(maxVal * 0.5)
-
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-//        crownSequencer.focus()
-
     }
     
     override func didAppear() {
@@ -49,19 +38,16 @@ class InterfaceController: WKInterfaceController {
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
-//        stopSound()
     }
 
     @IBAction func whistleButtonPressed() {
         playSound()
-//        player.play()
     }
     
     func playSound() {
         let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
-//        player.numberOfLoops = -1
     }
     
     @IBAction func volumeSliderChanged(_ value: Float) {
@@ -69,13 +55,14 @@ class InterfaceController: WKInterfaceController {
         print("selectedVal 2", selectedVal)
         player.volume = selectedVal * 0.1
         print("player.volume", player.volume)
-
     }
     
 }
 
 // MARK: WKCrownDelegate
 extension InterfaceController: WKCrownDelegate {
+    
+    // Match Volume Slider with Digital Crown 
     public func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
         // 1 divided by number of rotations required to change the value from min to max
 

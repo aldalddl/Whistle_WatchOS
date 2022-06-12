@@ -54,7 +54,7 @@ class TimerInterfaceController: WKInterfaceController {
         countdownGroup.setHidden(true)
         
         startButton.setEnabled(false)
-        startButton.setBackgroundColor(.green)
+        startButton.setBackgroundColor(UIColor(red: 79/255, green: 194/255, blue: 86/255, alpha: 1))
     }
 
     override func willActivate() {
@@ -131,13 +131,6 @@ class TimerInterfaceController: WKInterfaceController {
 
                 timer = Timer.scheduledTimer(timeInterval: duration - elapsedTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
 
-//                let smallRing = CLKComplicationTemplateUtilitarianSmallRingImage()
-//                smallRing.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
-//                smallRing.ringStyle = .Closed
-//                smallRing.fillFraction = 5 / 9
-//                handler(CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: smallRing))
-            
-            
                 myTimer.setDate(NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date)
                 myTimer.start()
                 startTime = NSDate()
@@ -145,7 +138,7 @@ class TimerInterfaceController: WKInterfaceController {
             case .stop:
                 self.watchStatus = .start
                 startButton.setTitle("Start")
-                startButton.setBackgroundColor(UIColor.green)
+                startButton.setBackgroundColor(UIColor(red: 79/255, green: 194/255, blue: 86/255, alpha: 1))
                 resetButton.setEnabled(true)
                 
                 let paused = NSDate()
@@ -161,13 +154,13 @@ class TimerInterfaceController: WKInterfaceController {
         
         timer?.invalidate()
         startButton.setTitle("Start")
-        startButton.setBackgroundColor(UIColor.green)
+        startButton.setBackgroundColor(UIColor(red: 79/255, green: 194/255, blue: 86/255, alpha: 1))
         resetButton.setEnabled(false)
         
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
         
-        //WKInterfaceTimer reset to picker time
+        // WKInterfaceTimer reset to picker time
         myTimer.stop()
         myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
         
@@ -182,13 +175,13 @@ class TimerInterfaceController: WKInterfaceController {
         timer?.invalidate()
         print("End.")
         startButton.setTitle("Start")
-        startButton.setBackgroundColor(UIColor.green)
+        startButton.setBackgroundColor(UIColor(red: 79/255, green: 194/255, blue: 86/255, alpha: 1))
         resetButton.setEnabled(false)
         
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
         
-        //WKInterfaceTimer reset to picker time
+        // WKInterfaceTimer reset to picker time
         myTimer.stop()
         myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
         

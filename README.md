@@ -1,34 +1,31 @@
 # Wristle
 Whistle on your wrist
 WatchOS app playing whistle sound maded for P.E teachers
-
+Wristle is an independant watchOS app which is the simplest digital whistle maded for P.E teachers
 
 ## Summary
 
 
 ## Requirements
-- WathOS 8+
+- watchOS 8.0+
 
 ## Description
 - Whistle
 - Timer
 
 ## Tech Stack
-* Independent Watch App
-* XCode
-* Swift based
+* Swift
 * WatchKit
-* Architecture
-  * MVC (Model-View-Controller)
+* Independent Watch App
+
+## Resource
+* [@Whistle Sound](https://github.com/ChoiysApple) Free Source
+
+## Contributors
+* Whistle image designed by Jimin Sung
+* Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)
 
 ## Installation
 - GO to App Store in your Apple Watch 
 - Search with keyword 'whistle' or 'wristle'
-- Download then you can use wristle
-
-## Library
-* [Lottie](https://airbnb.design/lottie/)
-
-## Contributors
-  * [@ChoiysApple](https://github.com/ChoiysApple)
-
+- Download and Use!

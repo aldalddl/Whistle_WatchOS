@@ -28,9 +28,9 @@ class InterfaceController: WKInterfaceController {
 //         crownSequencer.delegate = self
 //        crownSequencer.delegate = self
         
-        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player.volume = 0.5
+//        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
+//        player = try! AVAudioPlayer(contentsOf: url!)
+//        player.volume = 0.5
         volumeSlider.setValue(maxVal * 0.5)
 
     }
@@ -54,15 +54,14 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func whistleButtonPressed() {
         playSound()
+//        player.play()
     }
     
     func playSound() {
+        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
 //        player.numberOfLoops = -1
-    }
-    
-    func stopSound() {
-        player.stop()
     }
     
     @IBAction func volumeSliderChanged(_ value: Float) {

@@ -63,14 +63,11 @@ class TimerInterfaceController: WKInterfaceController {
         resetButton.setEnabled(false)
         minutePickerTimer()
         secondPickerTimer()
-        
-        
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-        
     }
 
     @IBAction func minutePickerChanged(_ value: Int) {
@@ -122,7 +119,6 @@ class TimerInterfaceController: WKInterfaceController {
                 timePickerGroup.setHidden(true)
                 countdownGroup.setHidden(false)
             
-//                timer?.invalidate()
                 minuteTotalTime = minuteOunces - 1
                 secondTotalTime = secondOunces
 
@@ -132,16 +128,14 @@ class TimerInterfaceController: WKInterfaceController {
                 minute = Double(minuteTotalTime) * 60.0
                 second = Double(secondTotalTime)
                 duration = minute + second
-//                date = NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date
 
                 timer = Timer.scheduledTimer(timeInterval: duration - elapsedTime, target: self, selector: #selector(timerDone), userInfo: nil, repeats: true)
-//            setFontSizeAndWeight(size: CGFloat, weight: CGFloat)
 
-            //            let smallRing = CLKComplicationTemplateUtilitarianSmallRingImage()
-//            smallRing.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
-//            smallRing.ringStyle = .Closed
-//            smallRing.fillFraction = 5 / 9
-//            handler(CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: smallRing))
+//                let smallRing = CLKComplicationTemplateUtilitarianSmallRingImage()
+//                smallRing.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
+//                smallRing.ringStyle = .Closed
+//                smallRing.fillFraction = 5 / 9
+//                handler(CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: smallRing))
             
             
                 myTimer.setDate(NSDate(timeIntervalSinceNow: duration - elapsedTime) as Date)

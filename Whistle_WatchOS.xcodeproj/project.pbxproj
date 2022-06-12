@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43845403282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43845402282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		43845403282ED54000CC5171 /* Wristle.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43845402282ED54000CC5171 /* Wristle.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		43845409282ED54000CC5171 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43845407282ED54000CC5171 /* Interface.storyboard */; };
 		4384540B282ED54300CC5171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384540A282ED54300CC5171 /* Assets.xcassets */; };
 		43845411282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -32,13 +32,6 @@
 			remoteGlobalIDString = 43845401282ED54000CC5171;
 			remoteInfo = "Whistle_WatchOS WatchKit App";
 		};
-		43845412282ED54300CC5171 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4384540F282ED54300CC5171;
-			remoteInfo = "Whistle_WatchOS WatchKit Extension";
-		};
 		43845426282ED54500CC5171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
@@ -52,6 +45,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 43845401282ED54000CC5171;
 			remoteInfo = "Whistle_WatchOS WatchKit App";
+		};
+		43A58C152853CA2C00CD2CAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4384540F282ED54300CC5171;
+			remoteInfo = "Whistle_WatchOS WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -73,7 +73,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				43845403282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app in Embed Watch Content */,
+				43845403282ED54000CC5171 /* Wristle.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,8 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		438453FE282ED54000CC5171 /* Whistle_WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whistle_WatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845402282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whistle_WatchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		438453FE282ED54000CC5171 /* Wristle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wristle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43845402282ED54000CC5171 /* Wristle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wristle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43845408282ED54000CC5171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4384540A282ED54300CC5171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Whistle_WatchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,14 +136,15 @@
 				43845428282ED54500CC5171 /* Whistle_WatchOSTests */,
 				43845432282ED54500CC5171 /* Whistle_WatchOSUITests */,
 				438453FF282ED54000CC5171 /* Products */,
+				43A58C172853CA3900CD2CAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		438453FF282ED54000CC5171 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				438453FE282ED54000CC5171 /* Whistle_WatchOS.app */,
-				43845402282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app */,
+				438453FE282ED54000CC5171 /* Wristle.app */,
+				43845402282ED54000CC5171 /* Wristle.app */,
 				43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */,
 				43845425282ED54500CC5171 /* Whistle_WatchOSTests.xctest */,
 				4384542F282ED54500CC5171 /* Whistle_WatchOSUITests.xctest */,
@@ -194,6 +195,13 @@
 			path = Whistle_WatchOSUITests;
 			sourceTree = "<group>";
 		};
+		43A58C172853CA3900CD2CAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,7 +219,7 @@
 			);
 			name = Whistle_WatchOS;
 			productName = Whistle_WatchOS;
-			productReference = 438453FE282ED54000CC5171 /* Whistle_WatchOS.app */;
+			productReference = 438453FE282ED54000CC5171 /* Wristle.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */ = {
@@ -224,11 +232,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				43845413282ED54300CC5171 /* PBXTargetDependency */,
+				43A58C162853CA2C00CD2CAA /* PBXTargetDependency */,
 			);
 			name = "Whistle_WatchOS WatchKit App";
 			productName = "Whistle_WatchOS WatchKit App";
-			productReference = 43845402282ED54000CC5171 /* Whistle_WatchOS WatchKit App.app */;
+			productReference = 43845402282ED54000CC5171 /* Wristle.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */ = {
@@ -416,11 +424,6 @@
 			target = 43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */;
 			targetProxy = 43845404282ED54000CC5171 /* PBXContainerItemProxy */;
 		};
-		43845413282ED54300CC5171 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */;
-			targetProxy = 43845412282ED54300CC5171 /* PBXContainerItemProxy */;
-		};
 		43845427282ED54500CC5171 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */;
@@ -430,6 +433,11 @@
 			isa = PBXTargetDependency;
 			target = 43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */;
 			targetProxy = 43845430282ED54500CC5171 /* PBXContainerItemProxy */;
+		};
+		43A58C162853CA2C00CD2CAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */;
+			targetProxy = 43A58C152853CA2C00CD2CAA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -562,14 +570,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Whistle_WatchOS WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Whistle_WatchOS WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CFBundleDisplayName = Wristle;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Whistle_WatchOS_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = Whistle_WatchOS_WatchKit_Extension.ExtensionDelegate;
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,7 +585,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -593,14 +601,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Whistle_WatchOS WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Whistle_WatchOS WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CFBundleDisplayName = Wristle;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Whistle_WatchOS_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = Whistle_WatchOS_WatchKit_Extension.ExtensionDelegate;
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,7 +616,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -626,15 +634,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Whistle_WatchOS_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Whistle_WatchOS WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle.watchkitapp;
+				PRODUCT_NAME = Wristle;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -651,15 +658,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Whistle_WatchOS_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Whistle_WatchOS WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle.watchkitapp;
+				PRODUCT_NAME = Wristle;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -673,11 +679,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle;
+				PRODUCT_NAME = Wristle;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -686,11 +692,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle;
+				PRODUCT_NAME = Wristle;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -702,7 +708,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSTests";
@@ -723,7 +729,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSTests";
@@ -742,7 +748,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSUITests";
@@ -761,7 +767,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7Z3LVHA4ZZ;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSUITests";

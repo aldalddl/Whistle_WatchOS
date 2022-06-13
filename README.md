@@ -4,7 +4,7 @@ WatchOS app playing whistle sound maded for P.E teachers
 Wristle is an independant watchOS app which is the simplest digital whistle maded for P.E teachers
 
 ## Summary
-<img src="https://user-images.githubusercontent.com/47246760/173420397-39d1227b-fbd9-4a09-a3c3-7349d7b61093.gif">
+<img src="">
 
 ## Requirements
 - watchOS 8.0+
@@ -19,7 +19,7 @@ Wristle is an independant watchOS app which is the simplest digital whistle made
 * Independent Watch App
 
 ## Resource
-* [@Whistle Sound](https://github.com/ChoiysApple) Free Source
+* [@Whistle Sound]() Free Source
 
 ## Contributors
 * Whistle image designed by Jimin Sung

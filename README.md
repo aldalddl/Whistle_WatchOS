@@ -15,7 +15,7 @@
 </br>   
 
 ## Description & API
-* ### **Whistle** ###
+* #### **Whistle** ####
   * Whistle Sound Button with sound controller in the main page
     * Used _AVAudioPlayer_ to implement sound effect
     * Used _WKInterfaceSlider_ with Digital Crown to implement volume controller

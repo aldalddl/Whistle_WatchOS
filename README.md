@@ -19,8 +19,7 @@
   * Whistle Sound Button with sound controller in the main page
     * Used _AVAudioPlayer_ to implement sound effect
     * Used _WKInterfaceSlider_ with Digital Crown to implement volume controller
-
-* ### **Timer** ###
+* #### **Timer** ####
   * Simple Timer in the next page
     * Used _WKInterfacePicker_ (list style) to implement time picker
     * Used _WKInterfaceTimer_ to implement count-down timer       

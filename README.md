@@ -5,6 +5,7 @@ Wristle is an independant watchOS app which is the simplest digital whistle made
 
 ## Summary
 <img src="https://user-images.githubusercontent.com/47246760/173548413-dba3022c-4ac0-4dce-8f95-efb0f9f32a0d.png">
+<img src="https://user-images.githubusercontent.com/47246760/173597379-3ebf84d7-80f3-40bd-aa0e-f771e70e2545.gif">
 
 ## Requirements
 - watchOS 8.0+

@@ -106,18 +106,26 @@
                         </group>
                         <group width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" id="SuH-yM-0BA">
                             <items>
-                                <button width="0.40000000000000002" height="1" alignment="left" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                    <connections>
-                                        <action selector="reset" destination="8MK-zO-tnT" id="hId-rx-wfZ"/>
-                                    </connections>
-                                </button>
-                                <button width="0.40000000000000002" height="1" alignment="right" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                    <connections>
-                                        <action selector="start" destination="8MK-zO-tnT" id="rg3-Mv-Tdx"/>
-                                    </connections>
-                                </button>
+                                <group width="0.40000000000000002" alignment="left" verticalAlignment="center" id="okE-pF-fGt">
+                                    <items>
+                                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Reset" id="9MH-QZ-fF8">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <action selector="reset" destination="8MK-zO-tnT" id="hId-rx-wfZ"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.40000000000000002" alignment="right" verticalAlignment="center" id="kjV-P7-7jS">
+                                    <items>
+                                        <button width="1" height="1" alignment="center" verticalAlignment="center" title="Start" id="IgR-rd-5CC">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <action selector="start" destination="8MK-zO-tnT" id="rg3-Mv-Tdx"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>

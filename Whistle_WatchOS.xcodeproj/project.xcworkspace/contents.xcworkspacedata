@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/aldalddl/Desktop/study/swift/Whistle_WatchOS/Whistle_WatchOS.xcodeproj">
    </FileRef>
 </Workspace>

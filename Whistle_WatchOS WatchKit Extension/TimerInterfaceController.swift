@@ -7,10 +7,10 @@
 
 import WatchKit
 import Foundation
-
+import AVFoundation
 
 class TimerInterfaceController: WKInterfaceController {
-
+    
     @IBOutlet weak var myTimer: WKInterfaceTimer!
     
     @IBOutlet weak var minutePicker: WKInterfacePicker!
@@ -47,6 +47,8 @@ class TimerInterfaceController: WKInterfaceController {
     var secondsPassed = 0
     var minuteTotalTime = 0
     var secondTotalTime = 0
+
+    var player: AVAudioPlayer!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -149,7 +151,7 @@ class TimerInterfaceController: WKInterfaceController {
     }
     
     @IBAction func reset() {
-        // avoid going to stop status
+        // Avoid going to stop status
         watchStatus = .start
         
         timer?.invalidate()
@@ -160,16 +162,16 @@ class TimerInterfaceController: WKInterfaceController {
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
         
-        // WKInterfaceTimer reset to picker time
+        // Reset WKInterfaceTimer to picker time
         myTimer.stop()
         myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
         
-        // Timer reset to picker time
+        // Reset timer to picker time
         elapsedTime = 0.0
     }
     
     @objc func timerDone(){
-        // avoid going to stop status
+        // Avoid going to stop status
         watchStatus = .start
         
         timer?.invalidate()
@@ -178,16 +180,21 @@ class TimerInterfaceController: WKInterfaceController {
         startButton.setBackgroundColor(UIColor(red: 79/255, green: 194/255, blue: 86/255, alpha: 1))
         resetButton.setEnabled(false)
         
+        let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+        
         timePickerGroup.setHidden(false)
         countdownGroup.setHidden(true)
         
-        // WKInterfaceTimer reset to picker time
+        // Reset WKInterfaceTimer to picker time
         myTimer.stop()
         myTimer.setDate(NSDate(timeIntervalSinceNow: 0.0) as Date)
         
-        // Timer reset to picker time
+        // Reset timer to picker time
         elapsedTime = 0.0
     }
+    
 }
 
 // MARK: Start Button
@@ -203,6 +210,6 @@ extension TimerInterfaceController {
             print("abled")
             startButton.setEnabled(true)
         }
-        
+
     }
 }

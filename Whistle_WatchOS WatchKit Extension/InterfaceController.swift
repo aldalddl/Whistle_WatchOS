@@ -62,7 +62,7 @@ class InterfaceController: WKInterfaceController {
 // MARK: WKCrownDelegate
 extension InterfaceController: WKCrownDelegate {
     
-    // Match Volume Slider with Digital Crown 
+    // Match Volume Slider with Digital Crown
     public func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
         // 1 divided by number of rotations required to change the value from min to max
 

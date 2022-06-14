@@ -1,8 +1,8 @@
 # Wristle
-### **Whistle on your wrist**
+## **Whistle on your wrist**
 
-> Simplest Digital Whistle App maded for P.E teachers
-> Independant WatchOS App 
+> ### Simplest Digital Whistle App maded for P.E teachers
+> ### Independant WatchOS App 
 
 
 <p float="left">

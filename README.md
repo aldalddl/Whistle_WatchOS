@@ -39,12 +39,12 @@
 </br>   
 
 ## Resource
-* [@Whistle Sound]() Free Source     
+* Whistle Sound: Free Source     
 
 </br>   
 
 ## Contributors
-* Whistle image designed by **Jimin Sung**
+* Whistle image by **Jimin Sung**
 * Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)    
 
 </br>   

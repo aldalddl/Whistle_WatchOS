@@ -23,26 +23,31 @@
 * **Timer** 
   * Simple Timer in the next page
     * Used _WKInterfacePicker_ (list style) to implement time picker
-    * Used _WKInterfaceTimer_ to implement count-down timer 
+    * Used _WKInterfaceTimer_ to implement count-down timer       
+
 
 </br>   
 ## Requirements
-* watchOS 8.0+
+* watchOS 8.0+     
+
 
 </br>   
 ## Tech Stack
 * Swift
 * WatchKit
-* Independent Watch App
+* Independent Watch App     
+
 
 </br>   
 ## Resource
-* [@Whistle Sound]() Free Source
+* [@Whistle Sound]() Free Source     
+
 
 </br>   
 ## Contributors
 * Whistle image designed by **Jimin Sung**
-* Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)
+* Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)    
+
 
 </br>   
 ## Installation

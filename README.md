@@ -4,7 +4,8 @@ WatchOS app playing whistle sound maded for P.E teachers
 Wristle is an independant watchOS app which is the simplest digital whistle maded for P.E teachers
 
 ## Summary
-<img src="">
+<img src="![frame](https://user-images.githubusercontent.com/47246760/173548413-dba3022c-4ac0-4dce-8f95-efb0f9f32a0d.png)
+">
 
 ## Requirements
 - watchOS 8.0+

@@ -3,7 +3,7 @@ Whistle on your wrist
 WatchOS app playing whistle sound maded for P.E teachers
 Wristle is an independant watchOS app which is the simplest digital whistle maded for P.E teachers
 
-## Summary
+
 <p float="left">
   <img src="https://user-images.githubusercontent.com/47246760/173627160-e800fe2c-96d6-49b0-b78b-d6b79f67cadc.gif" width="245" />
   <img src="https://user-images.githubusercontent.com/47246760/173628718-e1911484-1111-4321-b240-eb29192d1983.gif" width="245" /> 
@@ -11,12 +11,20 @@ Wristle is an independant watchOS app which is the simplest digital whistle made
   <img src="https://user-images.githubusercontent.com/47246760/173628921-a982cc39-d61d-452c-a0da-90f7fe7b4fd1.gif" width="245" />
 </p>
 
+## Description & API
+* Whistle 
+  * Whistle Sound Button with sound controller in the main page
+   * Used AVAudioPlayer to implement sound effect
+   * Used WKInterfaceSlider with Digital Crown to implement volume controller
+
+* Timer 
+  * Simple Timer in the next page
+   * Used WKInterfacePicker (list style) to implement time picker
+   * Used WKInterfaceTimer to implement count-down timer 
+
 ## Requirements
 - watchOS 8.0+
 
-## Description
-- Whistle
-- Timer
 
 ## Tech Stack
 * Swift

@@ -39,7 +39,7 @@
 </br>   
 
 ## Resource
-* Whistle Sound: Free Source     
+* Whistle Sound: Free source     
 
 </br>   
 

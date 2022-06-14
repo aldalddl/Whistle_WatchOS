@@ -1,7 +1,8 @@
 # Wristle
 
-## Whistle on your wrist
+## _Whistle on your wrist_
 > Simplest Digital Whistle App maded for P.E teachers
+> 
 > Independant WatchOS App 
 
 
@@ -45,6 +46,6 @@
 
 
 ## Installation
-- GO to App Store in your Apple Watch 
-- Search with keyword 'whistle' or 'wristle'
-- Download and Use!
+1. GO to App Store in your Apple Watch 
+2. Search with keyword 'whistle' or 'wristle'
+3. Download and Use!

@@ -17,13 +17,13 @@
 ## Description & API
 * Whistle 
   * Whistle Sound Button with sound controller in the main page
-    * Used AVAudioPlayer to implement sound effect
-    * Used WKInterfaceSlider with Digital Crown to implement volume controller
+    * Used _AVAudioPlayer_ to implement sound effect
+    * Used _WKInterfaceSlider_ with Digital Crown to implement volume controller
 
 * Timer 
   * Simple Timer in the next page
-    * Used WKInterfacePicker (list style) to implement time picker
-    * Used WKInterfaceTimer to implement count-down timer 
+    * Used _WKInterfacePicker_ (list style) to implement time picker
+    * Used _WKInterfaceTimer_ to implement count-down timer 
 
 
 ## Requirements
@@ -41,7 +41,7 @@
 
 
 ## Contributors
-* Whistle image designed by Jimin Sung
+* Whistle image designed by **Jimin Sung**
 * Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)
 
 

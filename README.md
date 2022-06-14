@@ -15,12 +15,12 @@
 
 
 ## Description & API
-* Whistle 
+* **Whistle**
   * Whistle Sound Button with sound controller in the main page
     * Used _AVAudioPlayer_ to implement sound effect
     * Used _WKInterfaceSlider_ with Digital Crown to implement volume controller
 
-* Timer 
+* **Timer** 
   * Simple Timer in the next page
     * Used _WKInterfacePicker_ (list style) to implement time picker
     * Used _WKInterfaceTimer_ to implement count-down timer 
@@ -46,6 +46,6 @@
 
 
 ## Installation
-1. GO to App Store in your Apple Watch 
-2. Search with keyword 'whistle' or 'wristle'
+1. Go to App Store in your _Apple Watch_ 
+2. Search with keyword _'whistle'_ or _'wristle'_
 3. Download and Use!

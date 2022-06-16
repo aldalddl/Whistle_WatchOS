@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "43845401282ED54000CC5171"
-               BuildableName = "Wristle.app"
+               BuildableName = "Whistle_WatchOS.app"
                BlueprintName = "Whistle_WatchOS WatchKit App"
                ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "438453FD282ED54000CC5171"
-               BuildableName = "Wristle.app"
+               BuildableName = "Whistle_WatchOS.app"
                BlueprintName = "Whistle_WatchOS"
                ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
             </BuildableReference>
@@ -55,16 +55,18 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/(null)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43845401282ED54000CC5171"
-            BuildableName = "Wristle.app"
+            BuildableName = "Whistle_WatchOS.app"
             BlueprintName = "Whistle_WatchOS WatchKit App"
             ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,16 +75,27 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/(null)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43845401282ED54000CC5171"
-            BuildableName = "Wristle.app"
+            BuildableName = "Whistle_WatchOS.app"
             BlueprintName = "Whistle_WatchOS WatchKit App"
             ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "43845401282ED54000CC5171"
+            BuildableName = "Whistle_WatchOS.app"
+            BlueprintName = "Whistle_WatchOS WatchKit App"
+            ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

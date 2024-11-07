@@ -11,7 +11,6 @@
 		43845409282ED54000CC5171 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43845407282ED54000CC5171 /* Interface.storyboard */; };
 		4384540B282ED54300CC5171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384540A282ED54300CC5171 /* Assets.xcassets */; };
 		43845411282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43845416282ED54300CC5171 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845415282ED54300CC5171 /* InterfaceController.swift */; };
 		43845418282ED54300CC5171 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845417282ED54300CC5171 /* ExtensionDelegate.swift */; };
 		4384541A282ED54300CC5171 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845419282ED54300CC5171 /* NotificationController.swift */; };
 		4384541C282ED54300CC5171 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384541B282ED54300CC5171 /* ComplicationController.swift */; };
@@ -22,6 +21,7 @@
 		4384544B282ED56F00CC5171 /* whistleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4384544A282ED56F00CC5171 /* whistleSound.wav */; };
 		4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */; };
 		4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */; };
+		470D90C12CDCBE110052845A /* WhistleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470D90C02CDCBE110052845A /* WhistleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,6 @@
 		43845408282ED54000CC5171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4384540A282ED54300CC5171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Whistle_WatchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845415282ED54300CC5171 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		43845417282ED54300CC5171 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		43845419282ED54300CC5171 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		4384541B282ED54300CC5171 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		4384544A282ED56F00CC5171 /* whistleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whistleSound.wav; path = ../../Whistle_assets/whistleSound.wav; sourceTree = "<group>"; };
 		4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSequenceInterfaceController.swift; sourceTree = "<group>"; };
+		470D90C02CDCBE110052845A /* WhistleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhistleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				4384544A282ED56F00CC5171 /* whistleSound.wav */,
-				43845415282ED54300CC5171 /* InterfaceController.swift */,
 				43845417282ED54300CC5171 /* ExtensionDelegate.swift */,
 				43845419282ED54300CC5171 /* NotificationController.swift */,
 				4384541B282ED54300CC5171 /* ComplicationController.swift */,
@@ -174,6 +173,7 @@
 				43845420282ED54500CC5171 /* PushNotificationPayload.apns */,
 				4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */,
 				4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */,
+				470D90C02CDCBE110052845A /* WhistleView.swift */,
 			);
 			path = "Whistle_WatchOS WatchKit Extension";
 			sourceTree = "<group>";
@@ -393,9 +393,9 @@
 				4384541A282ED54300CC5171 /* NotificationController.swift in Sources */,
 				4384541C282ED54300CC5171 /* ComplicationController.swift in Sources */,
 				43845418282ED54300CC5171 /* ExtensionDelegate.swift in Sources */,
+				470D90C12CDCBE110052845A /* WhistleView.swift in Sources */,
 				4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */,
 				4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */,
-				43845416282ED54300CC5171 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ struct ContentView: View {
         VStack{
             PagerManager(pageCount: 2, currentIndex: $currentPage) {
                 WhistleView()
+                TimerView()
             }
         }
         

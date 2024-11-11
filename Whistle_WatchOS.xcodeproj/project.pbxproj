@@ -19,11 +19,11 @@
 		43845434282ED54500CC5171 /* Whistle_WatchOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845433282ED54500CC5171 /* Whistle_WatchOSUITests.swift */; };
 		43845436282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845435282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift */; };
 		4384544B282ED56F00CC5171 /* whistleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4384544A282ED56F00CC5171 /* whistleSound.wav */; };
-		4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */; };
 		4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */; };
 		47DCA43C2CE2090600358DBA /* PageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43B2CE2090600358DBA /* PageManager.swift */; };
 		47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43D2CE2093E00358DBA /* ContentView.swift */; };
 		47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43F2CE2097B00358DBA /* WhistleView.swift */; };
+		47DCA4422CE209CE00358DBA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA4412CE209CE00358DBA /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +100,11 @@
 		43845433282ED54500CC5171 /* Whistle_WatchOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle_WatchOSUITests.swift; sourceTree = "<group>"; };
 		43845435282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle_WatchOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4384544A282ED56F00CC5171 /* whistleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whistleSound.wav; path = ../../Whistle_assets/whistleSound.wav; sourceTree = "<group>"; };
-		4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSequenceInterfaceController.swift; sourceTree = "<group>"; };
 		47DCA43B2CE2090600358DBA /* PageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageManager.swift; sourceTree = "<group>"; };
 		47DCA43D2CE2093E00358DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47DCA43F2CE2097B00358DBA /* WhistleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhistleView.swift; sourceTree = "<group>"; };
+		47DCA4412CE209CE00358DBA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +175,11 @@
 				4384541D282ED54500CC5171 /* Assets.xcassets */,
 				4384541F282ED54500CC5171 /* Info.plist */,
 				43845420282ED54500CC5171 /* PushNotificationPayload.apns */,
-				4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */,
 				4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */,
 				47DCA43B2CE2090600358DBA /* PageManager.swift */,
 				47DCA43D2CE2093E00358DBA /* ContentView.swift */,
 				47DCA43F2CE2097B00358DBA /* WhistleView.swift */,
+				47DCA4412CE209CE00358DBA /* TimerView.swift */,
 			);
 			path = "Whistle_WatchOS WatchKit Extension";
 			sourceTree = "<group>";
@@ -396,13 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DCA4422CE209CE00358DBA /* TimerView.swift in Sources */,
 				4384541A282ED54300CC5171 /* NotificationController.swift in Sources */,
 				4384541C282ED54300CC5171 /* ComplicationController.swift in Sources */,
 				47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */,
 				43845418282ED54300CC5171 /* ExtensionDelegate.swift in Sources */,
 				47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */,
 				47DCA43C2CE2090600358DBA /* PageManager.swift in Sources */,
-				4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */,
 				4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

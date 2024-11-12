@@ -75,10 +75,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "Whistle_WatchOS WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/(null)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43845401282ED54000CC5171"
@@ -86,7 +84,7 @@
             BlueprintName = "Whistle_WatchOS WatchKit App"
             ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -94,10 +92,8 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/(null)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43845401282ED54000CC5171"
@@ -105,16 +101,7 @@
             BlueprintName = "Whistle_WatchOS WatchKit App"
             ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43845401282ED54000CC5171"
-            BuildableName = "Whistle_WatchOS.app"
-            BlueprintName = "Whistle_WatchOS WatchKit App"
-            ReferencedContainer = "container:Whistle_WatchOS.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -8,38 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		43845403282ED54000CC5171 /* Whistle_WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43845402282ED54000CC5171 /* Whistle_WatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43845409282ED54000CC5171 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43845407282ED54000CC5171 /* Interface.storyboard */; };
 		4384540B282ED54300CC5171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384540A282ED54300CC5171 /* Assets.xcassets */; };
 		43845411282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43845416282ED54300CC5171 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845415282ED54300CC5171 /* InterfaceController.swift */; };
-		43845418282ED54300CC5171 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845417282ED54300CC5171 /* ExtensionDelegate.swift */; };
-		4384541A282ED54300CC5171 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845419282ED54300CC5171 /* NotificationController.swift */; };
-		4384541C282ED54300CC5171 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384541B282ED54300CC5171 /* ComplicationController.swift */; };
-		4384541E282ED54500CC5171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384541D282ED54500CC5171 /* Assets.xcassets */; };
-		4384542A282ED54500CC5171 /* Whistle_WatchOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845429282ED54500CC5171 /* Whistle_WatchOSTests.swift */; };
-		43845434282ED54500CC5171 /* Whistle_WatchOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845433282ED54500CC5171 /* Whistle_WatchOSUITests.swift */; };
-		43845436282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43845435282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift */; };
-		4384544B282ED56F00CC5171 /* whistleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4384544A282ED56F00CC5171 /* whistleSound.wav */; };
-		4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */; };
-		4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */; };
+		47C9D1BD2CE3154400AE88BC /* Wristle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C9D1BC2CE3153D00AE88BC /* Wristle.swift */; };
+		47C9D1BF2CE315D000AE88BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384540A282ED54300CC5171 /* Assets.xcassets */; };
+		47C9D1C12CE3166200AE88BC /* whistleSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 47C9D1C02CE3166200AE88BC /* whistleSound.mp3 */; };
+		47C9D1C22CE3166200AE88BC /* whistleSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 47C9D1C02CE3166200AE88BC /* whistleSound.mp3 */; };
+		47C9D1C42CE3167200AE88BC /* whistleSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 47C9D1C02CE3166200AE88BC /* whistleSound.mp3 */; };
+		47DCA43C2CE2090600358DBA /* PageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43B2CE2090600358DBA /* PageManager.swift */; };
+		47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43D2CE2093E00358DBA /* ContentView.swift */; };
+		47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43F2CE2097B00358DBA /* WhistleView.swift */; };
+		47DCA4422CE209CE00358DBA /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		43845404282ED54000CC5171 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43845401282ED54000CC5171;
-			remoteInfo = "Whistle_WatchOS WatchKit App";
-		};
-		43845426282ED54500CC5171 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4384540F282ED54300CC5171;
-			remoteInfo = "Whistle_WatchOS WatchKit Extension";
-		};
-		43845430282ED54500CC5171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 438453F8282ED53F00CC5171 /* Project object */;
 			proxyType = 1;
@@ -83,42 +66,20 @@
 /* Begin PBXFileReference section */
 		438453FE282ED54000CC5171 /* Whistle_WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whistle_WatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43845402282ED54000CC5171 /* Whistle_WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whistle_WatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845408282ED54000CC5171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4384540A282ED54300CC5171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Whistle_WatchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845415282ED54300CC5171 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		43845417282ED54300CC5171 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		43845419282ED54300CC5171 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		4384541B282ED54300CC5171 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		4384541D282ED54500CC5171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4384541F282ED54500CC5171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43845420282ED54500CC5171 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		43845425282ED54500CC5171 /* Whistle_WatchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Whistle_WatchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845429282ED54500CC5171 /* Whistle_WatchOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle_WatchOSTests.swift; sourceTree = "<group>"; };
-		4384542F282ED54500CC5171 /* Whistle_WatchOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Whistle_WatchOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43845433282ED54500CC5171 /* Whistle_WatchOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle_WatchOSUITests.swift; sourceTree = "<group>"; };
-		43845435282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle_WatchOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4384544A282ED56F00CC5171 /* whistleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whistleSound.wav; path = ../../Whistle_assets/whistleSound.wav; sourceTree = "<group>"; };
-		4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
-		4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSequenceInterfaceController.swift; sourceTree = "<group>"; };
+		47C9D1BC2CE3153D00AE88BC /* Wristle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wristle.swift; sourceTree = "<group>"; };
+		47C9D1C02CE3166200AE88BC /* whistleSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whistleSound.mp3; sourceTree = "<group>"; };
+		47DCA43B2CE2090600358DBA /* PageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageManager.swift; sourceTree = "<group>"; };
+		47DCA43D2CE2093E00358DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		47DCA43F2CE2097B00358DBA /* WhistleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhistleView.swift; sourceTree = "<group>"; };
+		47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4384540D282ED54300CC5171 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43845422282ED54500CC5171 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4384542C282ED54500CC5171 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,8 +94,6 @@
 			children = (
 				43845406282ED54000CC5171 /* Whistle_WatchOS WatchKit App */,
 				43845414282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */,
-				43845428282ED54500CC5171 /* Whistle_WatchOSTests */,
-				43845432282ED54500CC5171 /* Whistle_WatchOSUITests */,
 				438453FF282ED54000CC5171 /* Products */,
 				43A58C172853CA3900CD2CAA /* Frameworks */,
 			);
@@ -146,8 +105,6 @@
 				438453FE282ED54000CC5171 /* Whistle_WatchOS.app */,
 				43845402282ED54000CC5171 /* Whistle_WatchOS.app */,
 				43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */,
-				43845425282ED54500CC5171 /* Whistle_WatchOSTests.xctest */,
-				4384542F282ED54500CC5171 /* Whistle_WatchOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +112,6 @@
 		43845406282ED54000CC5171 /* Whistle_WatchOS WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				43845407282ED54000CC5171 /* Interface.storyboard */,
 				4384540A282ED54300CC5171 /* Assets.xcassets */,
 			);
 			path = "Whistle_WatchOS WatchKit App";
@@ -164,35 +120,16 @@
 		43845414282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4384544A282ED56F00CC5171 /* whistleSound.wav */,
-				43845415282ED54300CC5171 /* InterfaceController.swift */,
-				43845417282ED54300CC5171 /* ExtensionDelegate.swift */,
-				43845419282ED54300CC5171 /* NotificationController.swift */,
-				4384541B282ED54300CC5171 /* ComplicationController.swift */,
+				47C9D1C02CE3166200AE88BC /* whistleSound.mp3 */,
+				47C9D1BC2CE3153D00AE88BC /* Wristle.swift */,
 				4384541D282ED54500CC5171 /* Assets.xcassets */,
 				4384541F282ED54500CC5171 /* Info.plist */,
-				43845420282ED54500CC5171 /* PushNotificationPayload.apns */,
-				4384544C282ED6C500CC5171 /* TimerInterfaceController.swift */,
-				4384544E282EDECD00CC5171 /* TimerSequenceInterfaceController.swift */,
+				47DCA43B2CE2090600358DBA /* PageManager.swift */,
+				47DCA43D2CE2093E00358DBA /* ContentView.swift */,
+				47DCA43F2CE2097B00358DBA /* WhistleView.swift */,
+				47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */,
 			);
 			path = "Whistle_WatchOS WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		43845428282ED54500CC5171 /* Whistle_WatchOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				43845429282ED54500CC5171 /* Whistle_WatchOSTests.swift */,
-			);
-			path = Whistle_WatchOSTests;
-			sourceTree = "<group>";
-		};
-		43845432282ED54500CC5171 /* Whistle_WatchOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				43845433282ED54500CC5171 /* Whistle_WatchOSUITests.swift */,
-				43845435282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift */,
-			);
-			path = Whistle_WatchOSUITests;
 			sourceTree = "<group>";
 		};
 		43A58C172853CA3900CD2CAA /* Frameworks */ = {
@@ -256,42 +193,6 @@
 			productReference = 43845410282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		43845424282ED54500CC5171 /* Whistle_WatchOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43845444282ED54600CC5171 /* Build configuration list for PBXNativeTarget "Whistle_WatchOSTests" */;
-			buildPhases = (
-				43845421282ED54500CC5171 /* Sources */,
-				43845422282ED54500CC5171 /* Frameworks */,
-				43845423282ED54500CC5171 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43845427282ED54500CC5171 /* PBXTargetDependency */,
-			);
-			name = Whistle_WatchOSTests;
-			productName = Whistle_WatchOSTests;
-			productReference = 43845425282ED54500CC5171 /* Whistle_WatchOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4384542E282ED54500CC5171 /* Whistle_WatchOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43845447282ED54600CC5171 /* Build configuration list for PBXNativeTarget "Whistle_WatchOSUITests" */;
-			buildPhases = (
-				4384542B282ED54500CC5171 /* Sources */,
-				4384542C282ED54500CC5171 /* Frameworks */,
-				4384542D282ED54500CC5171 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43845431282ED54500CC5171 /* PBXTargetDependency */,
-			);
-			name = Whistle_WatchOSUITests;
-			productName = Whistle_WatchOSUITests;
-			productReference = 4384542F282ED54500CC5171 /* Whistle_WatchOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -311,14 +212,6 @@
 					4384540F282ED54300CC5171 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
-					43845424282ED54500CC5171 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 4384540F282ED54300CC5171;
-					};
-					4384542E282ED54500CC5171 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 43845401282ED54000CC5171;
-					};
 				};
 			};
 			buildConfigurationList = 438453FB282ED53F00CC5171 /* Build configuration list for PBXProject "Whistle_WatchOS" */;
@@ -337,8 +230,6 @@
 				438453FD282ED54000CC5171 /* Whistle_WatchOS */,
 				43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */,
 				4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */,
-				43845424282ED54500CC5171 /* Whistle_WatchOSTests */,
-				4384542E282ED54500CC5171 /* Whistle_WatchOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C9D1C12CE3166200AE88BC /* whistleSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4384540B282ED54300CC5171 /* Assets.xcassets in Resources */,
-				43845409282ED54000CC5171 /* Interface.storyboard in Resources */,
+				47C9D1C22CE3166200AE88BC /* whistleSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,22 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4384541E282ED54500CC5171 /* Assets.xcassets in Resources */,
-				4384544B282ED56F00CC5171 /* whistleSound.wav in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43845423282ED54500CC5171 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4384542D282ED54500CC5171 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				47C9D1C42CE3167200AE88BC /* whistleSound.mp3 in Resources */,
+				47C9D1BF2CE315D000AE88BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,29 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4384541A282ED54300CC5171 /* NotificationController.swift in Sources */,
-				4384541C282ED54300CC5171 /* ComplicationController.swift in Sources */,
-				43845418282ED54300CC5171 /* ExtensionDelegate.swift in Sources */,
-				4384544D282ED6C500CC5171 /* TimerInterfaceController.swift in Sources */,
-				4384544F282EDECD00CC5171 /* TimerSequenceInterfaceController.swift in Sources */,
-				43845416282ED54300CC5171 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43845421282ED54500CC5171 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4384542A282ED54500CC5171 /* Whistle_WatchOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4384542B282ED54500CC5171 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43845434282ED54500CC5171 /* Whistle_WatchOSUITests.swift in Sources */,
-				43845436282ED54500CC5171 /* Whistle_WatchOSUITestsLaunchTests.swift in Sources */,
+				47DCA4422CE209CE00358DBA /* CountdownTimerView.swift in Sources */,
+				47C9D1BD2CE3154400AE88BC /* Wristle.swift in Sources */,
+				47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */,
+				47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */,
+				47DCA43C2CE2090600358DBA /* PageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,33 +284,12 @@
 			target = 43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */;
 			targetProxy = 43845404282ED54000CC5171 /* PBXContainerItemProxy */;
 		};
-		43845427282ED54500CC5171 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */;
-			targetProxy = 43845426282ED54500CC5171 /* PBXContainerItemProxy */;
-		};
-		43845431282ED54500CC5171 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43845401282ED54000CC5171 /* Whistle_WatchOS WatchKit App */;
-			targetProxy = 43845430282ED54500CC5171 /* PBXContainerItemProxy */;
-		};
 		43A58C162853CA2C00CD2CAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4384540F282ED54300CC5171 /* Whistle_WatchOS WatchKit Extension */;
 			targetProxy = 43A58C152853CA2C00CD2CAA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		43845407282ED54000CC5171 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43845408282ED54000CC5171 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		43845437282ED54500CC5171 /* Debug */ = {
@@ -592,7 +431,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -623,7 +462,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -647,7 +486,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -671,7 +510,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -698,86 +537,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aldald.wristle;
 				PRODUCT_NAME = Whistle_WatchOS;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		43845445282ED54600CC5171 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whistle_WatchOS WatchKit Extension.appex/Whistle_WatchOS WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		43845446282ED54600CC5171 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whistle_WatchOS WatchKit Extension.appex/Whistle_WatchOS WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Release;
-		};
-		43845448282ED54600CC5171 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Whistle_WatchOS WatchKit App";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		43845449282ED54600CC5171 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aldalddl.Whistle-WatchOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Whistle_WatchOS WatchKit App";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
@@ -816,24 +575,6 @@
 			buildConfigurations = (
 				43845442282ED54600CC5171 /* Debug */,
 				43845443282ED54600CC5171 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43845444282ED54600CC5171 /* Build configuration list for PBXNativeTarget "Whistle_WatchOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43845445282ED54600CC5171 /* Debug */,
-				43845446282ED54600CC5171 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43845447282ED54600CC5171 /* Build configuration list for PBXNativeTarget "Whistle_WatchOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43845448282ED54600CC5171 /* Debug */,
-				43845449282ED54600CC5171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

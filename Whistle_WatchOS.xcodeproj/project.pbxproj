@@ -18,7 +18,7 @@
 		47DCA43C2CE2090600358DBA /* PageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43B2CE2090600358DBA /* PageManager.swift */; };
 		47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43D2CE2093E00358DBA /* ContentView.swift */; };
 		47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA43F2CE2097B00358DBA /* WhistleView.swift */; };
-		47DCA4422CE209CE00358DBA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA4412CE209CE00358DBA /* TimerView.swift */; };
+		47DCA4422CE209CE00358DBA /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,7 @@
 		47DCA43B2CE2090600358DBA /* PageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageManager.swift; sourceTree = "<group>"; };
 		47DCA43D2CE2093E00358DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47DCA43F2CE2097B00358DBA /* WhistleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhistleView.swift; sourceTree = "<group>"; };
-		47DCA4412CE209CE00358DBA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				47DCA43B2CE2090600358DBA /* PageManager.swift */,
 				47DCA43D2CE2093E00358DBA /* ContentView.swift */,
 				47DCA43F2CE2097B00358DBA /* WhistleView.swift */,
-				47DCA4412CE209CE00358DBA /* TimerView.swift */,
+				47DCA4412CE209CE00358DBA /* CountdownTimerView.swift */,
 			);
 			path = "Whistle_WatchOS WatchKit Extension";
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47DCA4422CE209CE00358DBA /* TimerView.swift in Sources */,
+				47DCA4422CE209CE00358DBA /* CountdownTimerView.swift in Sources */,
 				47C9D1BD2CE3154400AE88BC /* Wristle.swift in Sources */,
 				47DCA43E2CE2093E00358DBA /* ContentView.swift in Sources */,
 				47DCA4402CE2097B00358DBA /* WhistleView.swift in Sources */,

@@ -10,7 +10,7 @@ import AVFoundation
 
 struct WhistleView: View {
     @State private var volume: Float = 0.0
-    @State private var player: AVAudioPlayer? = AVAudioPlayer()
+    @State private var player: AVAudioPlayer?
     
     var body: some View {
         ScrollView(.vertical) {
@@ -36,10 +36,12 @@ struct WhistleView: View {
     }
     
     func setupAudioPlayer() {
-        guard let url = Bundle.main.url(forResource: "whistleSound", withExtension: "wav") else {
+        guard let url = Bundle.main.url(forResource: "whistleSound", withExtension: "mp3") else {
             print("No audio file")
             return
         }
+        
+        player = AVAudioPlayer()
         
         do {
             player = try AVAudioPlayer(contentsOf: url)

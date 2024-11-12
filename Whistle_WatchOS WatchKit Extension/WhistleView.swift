@@ -29,7 +29,7 @@ struct WhistleView: View {
                 }
             .tint(.green)
         }
-        .padding(.top, -25)
+        .padding([.leading, .trailing], 10)
         .onAppear {
             setupAudioPlayer()
         }

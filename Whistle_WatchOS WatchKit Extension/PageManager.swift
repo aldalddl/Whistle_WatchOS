@@ -48,9 +48,9 @@ struct PagerManager<Content: View>: View {
                             .foregroundColor(index == currentIndex ? Color.gray : Color.white)
                     }
                 }
-                .background(Color.clear)
-                .overlay(.clear)
             }
+            .padding(.top, 35)
+            .ignoresSafeArea()
         }
     }
 }

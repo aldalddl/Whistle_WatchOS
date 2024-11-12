@@ -78,7 +78,7 @@ struct TimerView: View {
                 .tint(isRunning ? .green : .red)
             }
         }
-        .padding(.top, -25)
+        .padding([.leading, .trailing], 10)
     }
     
     func startTimer() {

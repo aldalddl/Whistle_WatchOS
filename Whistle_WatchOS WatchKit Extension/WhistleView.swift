@@ -14,20 +14,24 @@ struct WhistleView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            Button(action: {
-                player?.play()
-            }) {
-                Image("whistleImg")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .listRowInsets(EdgeInsets())
-            }
-            
-            Slider(value: $volume, in: 0...10, step: 1)
-                .onChange(of: volume) { newValue in
-                    player?.volume = newValue
+            VStack {
+                Button(action: {
+                    player?.play()
+                }) {
+                    Image("whistleImg")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .buttonStyle(BorderedButtonStyle())
                 }
-            .tint(.green)
+                .buttonStyle(.plain)
+                
+                Slider(value: $volume, in: 0...10, step: 1)
+                    .onChange(of: volume) { newValue in
+                        player?.volume = newValue
+                    }
+                .tint(.green)
+            }
+            .padding(5)
         }
         .padding([.leading, .trailing], 10)
         .onAppear {

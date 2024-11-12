@@ -11,6 +11,7 @@ struct TimerView: View {
     @State private var minute = 0
     @State private var second = 0
     @State private var isRunning = false
+    @State private var hasStarted = false
     @State private var timer: Timer? = nil
     @State private var remaingSeconds = 0
     @State private var showPicker = true
@@ -58,7 +59,8 @@ struct TimerView: View {
                 }
                 .controlSize(.mini)
                 .buttonStyle(.borderedProminent)
-                .disabled(isRunning ? false : true)
+                .tint(!isRunning && hasStarted ? .orange : nil)
+                .disabled(!hasStarted)
                 
                 Spacer().frame(width: 20)
                 
@@ -83,6 +85,7 @@ struct TimerView: View {
         showPicker = false
         remaingSeconds = minute * 60 + second
         isRunning = true
+        hasStarted = true
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             if remaingSeconds > 0 {
@@ -101,6 +104,7 @@ struct TimerView: View {
     
     func resetTimer() {
         stopTimer()
+        hasStarted = false
         showPicker = true
         remaingSeconds = 0
     }

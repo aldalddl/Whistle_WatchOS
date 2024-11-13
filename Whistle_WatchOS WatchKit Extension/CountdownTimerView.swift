@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TimerView: View {
     @State private var minute = 0
     @State private var second = 0
     @State private var isRunning = false
-    @State private var hasStarted = false
-    @State private var timer: Timer? = nil
-    @State private var remaingSeconds = 0
+    @State private var remainingSeconds = 0
     @State private var showPicker = true
+    @State private var timerCancellable: AnyCancellable?
     
     var body: some View {
         GeometryReader { geometry in
@@ -48,7 +48,7 @@ struct TimerView: View {
                         }
                     } else {
                         HStack {
-                            Text(String(format: "%02d : %02d", remaingSeconds / 60, remaingSeconds % 60))
+                            Text(String(format: "%02d : %02d", remainingSeconds / 60, remainingSeconds % 60))
                                 .font(.system(size: 60, weight: .semibold))
                         }
                     }
@@ -65,8 +65,8 @@ struct TimerView: View {
                     }
                     .controlSize(.mini)
                     .buttonStyle(.borderedProminent)
-                    .tint(!isRunning && hasStarted ? .orange : nil)
-                    .disabled(!hasStarted)
+                    .tint(!isRunning && !showPicker ? .orange : nil)
+                    .disabled(showPicker)
                     
                     Spacer().frame(width: 20)
                     
@@ -90,30 +90,32 @@ struct TimerView: View {
     }
     
     func startTimer() {
-        showPicker = false
-        remaingSeconds = minute * 60 + second
-        isRunning = true
-        hasStarted = true
+        guard minute > 0 || second > 0 else { return }
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            if remaingSeconds > 0 {
-                remaingSeconds -= 1
-            } else {
-                resetTimer()
+        showPicker = false
+        remainingSeconds = minute * 60 + second
+        isRunning = true
+        
+        timerCancellable = Timer.publish(every: 1.0, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                if remainingSeconds > 0 {
+                    remainingSeconds -= 1
+                } else {
+                    resetTimer()
+                }
             }
-        }
     }
     
     func stopTimer() {
-        timer?.invalidate()
-        timer = nil
+        timerCancellable?.cancel()
+        timerCancellable = nil
         isRunning = false
     }
     
     func resetTimer() {
         stopTimer()
-        hasStarted = false
         showPicker = true
-        remaingSeconds = 0
+        remainingSeconds = 0
     }
 }

@@ -12,7 +12,6 @@ struct TimerView: View {
     @State private var minute = 0
     @State private var second = 0
     @State private var isRunning = false
-    @State private var timer: Timer? = nil
     @State private var remainingSeconds = 0
     @State private var showPicker = true
     @State private var timerCancellable: AnyCancellable?

@@ -13,7 +13,7 @@ struct TimerView: View {
     @State private var second = 0
     @State private var isRunning = false
     @State private var timer: Timer? = nil
-    @State private var remaingSeconds = 0
+    @State private var remainingSeconds = 0
     @State private var showPicker = true
     @State private var timerCancellable: AnyCancellable?
     
@@ -49,7 +49,7 @@ struct TimerView: View {
                         }
                     } else {
                         HStack {
-                            Text(String(format: "%02d : %02d", remaingSeconds / 60, remaingSeconds % 60))
+                            Text(String(format: "%02d : %02d", remainingSeconds / 60, remainingSeconds % 60))
                                 .font(.system(size: 60, weight: .semibold))
                         }
                     }
@@ -94,14 +94,14 @@ struct TimerView: View {
         guard minute > 0 || second > 0 else { return }
         
         showPicker = false
-        remaingSeconds = minute * 60 + second
+        remainingSeconds = minute * 60 + second
         isRunning = true
         
         timerCancellable = Timer.publish(every: 1.0, on: .main, in: .common)
             .autoconnect()
             .sink { _ in
-                if remaingSeconds > 0 {
-                    remaingSeconds -= 1
+                if remainingSeconds > 0 {
+                    remainingSeconds -= 1
                 } else {
                     resetTimer()
                 }
@@ -117,6 +117,6 @@ struct TimerView: View {
     func resetTimer() {
         stopTimer()
         showPicker = true
-        remaingSeconds = 0
+        remainingSeconds = 0
     }
 }

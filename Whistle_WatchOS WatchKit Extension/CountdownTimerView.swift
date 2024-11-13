@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TimerView: View {
     @State private var minute = 0
@@ -15,6 +16,7 @@ struct TimerView: View {
     @State private var timer: Timer? = nil
     @State private var remaingSeconds = 0
     @State private var showPicker = true
+    @State private var timerCancellable: AnyCancellable?
     
     var body: some View {
         GeometryReader { geometry in
@@ -95,18 +97,20 @@ struct TimerView: View {
         isRunning = true
         hasStarted = true
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            if remaingSeconds > 0 {
-                remaingSeconds -= 1
-            } else {
-                resetTimer()
+        timerCancellable = Timer.publish(every: 1.0, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                if remaingSeconds > 0 {
+                    remaingSeconds -= 1
+                } else {
+                    resetTimer()
+                }
             }
-        }
     }
     
     func stopTimer() {
-        timer?.invalidate()
-        timer = nil
+        timerCancellable?.cancel()
+        timerCancellable = nil
         isRunning = false
     }
     

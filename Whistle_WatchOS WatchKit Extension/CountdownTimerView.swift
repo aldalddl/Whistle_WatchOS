@@ -91,6 +91,8 @@ struct TimerView: View {
     }
     
     func startTimer() {
+        guard minute > 0 || second > 0 else { return }
+        
         showPicker = false
         remaingSeconds = minute * 60 + second
         isRunning = true

@@ -12,7 +12,6 @@ struct TimerView: View {
     @State private var minute = 0
     @State private var second = 0
     @State private var isRunning = false
-    @State private var remainingSeconds = 0
     @State private var showPicker = true
     @State private var timerCancellable: AnyCancellable?
     
@@ -49,10 +48,7 @@ struct TimerView: View {
                             .frame(maxWidth: geometry.size.width / 2)
                         }
                     } else {
-                        HStack {
-                            Text(String(format: "%02d : %02d", timerManager.remainingSeconds / 60, timerManager.remainingSeconds % 60))
-                                .font(.system(size: 60, weight: .semibold))
-                        }
+                        TimerDisplay(remainingSeconds: timerManager.remainingSeconds)
                     }
                 }
                 .frame(height: geometry.size.height * 0.7)
@@ -92,6 +88,16 @@ struct TimerView: View {
     }
 }
 
+struct TimerDisplay: View {
+    let remainingSeconds: Int
+    
+    var body: some View {
+        HStack {
+            Text(String(format: "%02d : %02d", remainingSeconds / 60, remainingSeconds % 60))
+                .font(.system(size: 60, weight: .semibold))
+        }
+    }
+}
 class TimerManager: ObservableObject {
     @Published private(set) var remainingSeconds = 0
     @Published private(set) var isRunning = false

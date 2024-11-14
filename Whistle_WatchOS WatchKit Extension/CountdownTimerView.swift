@@ -11,9 +11,7 @@ import Combine
 struct TimerView: View {
     @State private var minute = 0
     @State private var second = 0
-    @State private var isRunning = false
     @State private var showPicker = true
-    @State private var timerCancellable: AnyCancellable?
     
     @StateObject private var timerManager = TimerManager()
     
@@ -55,32 +53,23 @@ struct TimerView: View {
                 
                 Spacer().frame(height: 20)
                 
-                HStack {
-                    Button(action: {
+                ControlButtons(
+                    isRunning: timerManager.isRunning,
+                    showPicker: showPicker,
+                    onReset: {
                         timerManager.resetTimer()
-                    }) {
-                        Text("Reset")
-                    }
-                    .controlSize(.mini)
-                    .buttonStyle(.borderedProminent)
-                    .tint(!timerManager.isRunning && !showPicker ? .orange : nil)
-                    .disabled(showPicker)
-                    
-                    Spacer().frame(width: 20)
-                    
-                    Button(action: {
+                        showPicker = true
+                    },
+                    onStartStop: {
                         if !timerManager.isRunning {
+                            timerManager.setTimer(minute: minute, second: second)
                             timerManager.startTimer()
+                            showPicker = false
                         } else {
                             timerManager.stopTimer()
                         }
-                    }) {
-                        Text(timerManager.isRunning ? "Stop" : "Start")
                     }
-                    .controlSize(.mini)
-                    .buttonStyle(.borderedProminent)
-                    .tint(timerManager.isRunning ? .green : .red)
-                }
+                )
             }
             .padding(.top, -25)
         }
@@ -98,6 +87,35 @@ struct TimerDisplay: View {
         }
     }
 }
+
+struct ControlButtons: View {
+    let isRunning: Bool
+    let showPicker: Bool
+    let onReset: () -> Void
+    let onStartStop: () -> Void
+    
+    var body: some View {
+        HStack {
+            Button(action: onReset) {
+                Text("Reset")
+            }
+            .controlSize(.mini)
+            .buttonStyle(.borderedProminent)
+            .tint(!isRunning && !showPicker ? .orange : nil)
+            .disabled(showPicker)
+            
+            Spacer().frame(width: 20)
+            
+            Button(action: onStartStop) {
+                Text(isRunning ? "Stop" : "Start")
+            }
+            .controlSize(.mini)
+            .buttonStyle(.borderedProminent)
+            .tint(isRunning ? .green : .red)
+        }
+    }
+}
+
 class TimerManager: ObservableObject {
     @Published private(set) var remainingSeconds = 0
     @Published private(set) var isRunning = false

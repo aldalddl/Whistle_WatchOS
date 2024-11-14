@@ -98,6 +98,10 @@ class TimerManager: ObservableObject {
     
     private var timerCancellable: AnyCancellable?
     
+    func setTimer(minute: Int, second: Int) {
+        remainingSeconds = minute * 60 + second
+    }
+    
     func startTimer() {
         guard remainingSeconds > 0 else { return }
         

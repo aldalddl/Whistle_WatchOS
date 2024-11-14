@@ -16,6 +16,8 @@ struct TimerView: View {
     @State private var showPicker = true
     @State private var timerCancellable: AnyCancellable?
     
+    @StateObject private var timerManager = TimerManager()
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -48,7 +50,7 @@ struct TimerView: View {
                         }
                     } else {
                         HStack {
-                            Text(String(format: "%02d : %02d", remainingSeconds / 60, remainingSeconds % 60))
+                            Text(String(format: "%02d : %02d", timerManager.remainingSeconds / 60, timerManager.remainingSeconds % 60))
                                 .font(.system(size: 60, weight: .semibold))
                         }
                     }
@@ -59,50 +61,57 @@ struct TimerView: View {
                 
                 HStack {
                     Button(action: {
-                        resetTimer()
+                        timerManager.resetTimer()
                     }) {
                         Text("Reset")
                     }
                     .controlSize(.mini)
                     .buttonStyle(.borderedProminent)
-                    .tint(!isRunning && !showPicker ? .orange : nil)
+                    .tint(!timerManager.isRunning && !showPicker ? .orange : nil)
                     .disabled(showPicker)
                     
                     Spacer().frame(width: 20)
                     
                     Button(action: {
-                        if !isRunning {
-                            startTimer()
+                        if !timerManager.isRunning {
+                            timerManager.startTimer()
                         } else {
-                            stopTimer()
+                            timerManager.stopTimer()
                         }
                     }) {
-                        Text(isRunning ? "Stop" : "Start")
+                        Text(timerManager.isRunning ? "Stop" : "Start")
                     }
                     .controlSize(.mini)
                     .buttonStyle(.borderedProminent)
-                    .tint(isRunning ? .green : .red)
+                    .tint(timerManager.isRunning ? .green : .red)
                 }
             }
             .padding(.top, -25)
         }
         .padding([.leading, .trailing], 10)
     }
+}
+
+class TimerManager: ObservableObject {
+    @Published private(set) var remainingSeconds = 0
+    @Published private(set) var isRunning = false
+    
+    private var timerCancellable: AnyCancellable?
     
     func startTimer() {
-        guard minute > 0 || second > 0 else { return }
+        guard remainingSeconds > 0 else { return }
         
-        showPicker = false
-        remainingSeconds = minute * 60 + second
         isRunning = true
         
         timerCancellable = Timer.publish(every: 1.0, on: .main, in: .common)
             .autoconnect()
-            .sink { _ in
-                if remainingSeconds > 0 {
-                    remainingSeconds -= 1
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                
+                if self.remainingSeconds > 0 {
+                    self.remainingSeconds -= 1
                 } else {
-                    resetTimer()
+                    self.resetTimer()
                 }
             }
     }
@@ -115,7 +124,6 @@ struct TimerView: View {
     
     func resetTimer() {
         stopTimer()
-        showPicker = true
         remainingSeconds = 0
     }
 }

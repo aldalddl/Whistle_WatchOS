@@ -146,7 +146,6 @@ class TimerManager: ObservableObject {
     
     func stopTimer() {
         timerCancellable?.cancel()
-        timerCancellable = nil
         isRunning = false
     }
     

@@ -15,18 +15,11 @@ struct WhistleView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                Button(action: {
+                WhistleButton(action: {
                     whistleManager.playSound()
-                }) {
-                    Image("whistleImg")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .buttonStyle(BorderedButtonStyle())
-                }
-                .buttonStyle(.plain)
+                })
                 
-                Slider(value: $whistleManager.volume, in: 0...10, step: 1)
-                    .tint(.green)
+                WhistleSlider(volume: $whistleManager.volume)
             }
             .padding(5)
         }
@@ -37,6 +30,29 @@ struct WhistleView: View {
         .onDisappear {
             whistleManager.cancelSubscriptions()
         }
+    }
+}
+
+struct WhistleButton: View {
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image("whistleImg")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .buttonStyle(BorderedButtonStyle())
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+struct WhistleSlider: View {
+    @Binding var volume: Float
+    
+    var body: some View {
+        Slider(value: $volume, in: 0...10, step: 1)
+            .tint(.green)
     }
 }
 

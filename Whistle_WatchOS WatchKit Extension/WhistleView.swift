@@ -6,38 +6,61 @@
 //
 
 import SwiftUI
+import Combine
 import AVFoundation
 
 struct WhistleView: View {
-    @State private var volume: Float = 0.0
-    @State private var player: AVAudioPlayer?
+    @StateObject private var whistleManager = WhistleManager()
     
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                Button(action: {
-                    player?.play()
-                }) {
-                    Image("whistleImg")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .buttonStyle(BorderedButtonStyle())
-                }
-                .buttonStyle(.plain)
+                WhistleButton(action: {
+                    whistleManager.playSound()
+                })
                 
-                Slider(value: $volume, in: 0...10, step: 1)
-                    .onChange(of: volume) { newValue in
-                        player?.volume = newValue
-                    }
-                .tint(.green)
+                WhistleSlider(volume: $whistleManager.volume)
             }
             .padding(5)
         }
         .padding([.leading, .trailing], 10)
         .onAppear {
-            setupAudioPlayer()
+            whistleManager.setupAudioPlayer()
+        }
+        .onDisappear {
+            whistleManager.cancelSubscriptions()
         }
     }
+}
+
+struct WhistleButton: View {
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image("whistleImg")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .buttonStyle(BorderedButtonStyle())
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+struct WhistleSlider: View {
+    @Binding var volume: Float
+    
+    var body: some View {
+        Slider(value: $volume, in: 0...10, step: 1)
+            .tint(.green)
+    }
+}
+
+class WhistleManager: ObservableObject {
+    @Published var volume: Float = 5
+    
+    private var player: AVAudioPlayer?
+    private var volumeCancellable: AnyCancellable?
     
     func setupAudioPlayer() {
         guard let url = Bundle.main.url(forResource: "whistleSound", withExtension: "mp3") else {
@@ -45,14 +68,14 @@ struct WhistleView: View {
             return
         }
         
-        player = AVAudioPlayer()
-        
         do {
             player = try AVAudioPlayer(contentsOf: url)
             player?.volume = volume
         } catch {
             print("Cannot create audio player: \(error)")
         }
+        
+        setupVolumePublisher()
     }
     
     func playSound() {
@@ -64,5 +87,16 @@ struct WhistleView: View {
         }
         
         player.play()
+    }
+    
+    private func setupVolumePublisher() {
+        volumeCancellable = $volume
+            .sink { [weak self] newVolume in
+                self?.player?.volume = newVolume
+            }
+    }
+    
+    func cancelSubscriptions() {
+        volumeCancellable?.cancel()
     }
 }
